@@ -115,6 +115,45 @@
       }
     }
 
+    .movie-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+}
+
+.poster {
+  width: 150px;
+  margin-right: 20px;
+}
+
+.poster img {
+  width: 100%;
+}
+
+.details {
+  flex-grow: 1;
+}
+
+.label {
+  font-weight: bold;
+}
+
+.movie-info p {
+  margin-bottom: 10px;
+}
+
+.movie-info p:last-child {
+  margin-bottom: 0;
+}
+
+.movie-info span:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+
 
   </style>
 </head>
@@ -144,9 +183,50 @@
       <!-- HTML for the similar movie rectangles from the previous example... -->
     </div>
 
-    <div class="movie-info" id="movie-details">
-      <!-- HTML for the movie details rectangle from the previous example... -->
-    </div>
+    <div class="movie-info" id="searched-movie">
+        <div class="poster">
+          <img src="" alt="" id="movie-poster">
+        </div>
+        <div class="details">
+          <h2 id="movie-title"></h2>
+          <p><span class="label">Year:</span> <span id="movie-year"></span></p>
+          <p><span class="label">Duration:</span> <span id="movie-duration"></span></p>
+          <p><span class="label">Genre:</span> <span id="movie-genre"></span></p>
+          <p><span class="label">Actors:</span> <span id="movie-actors"></span></p>
+          <p><span class="label">IMDb Rating:</span> <span id="movie-rating"></span></p>
+          <p><span class="label">Rank:</span> <span id="movie-rank"></span></p>
+          <p><span class="label">Honors and Awards:</span> <span id="movie-awards"></span></p>
+        </div>
+      </div>
+
+      <div class="similar-movies">
+        <div class="similar-movie" id="similar-movie-1">
+          <img src="" alt="" class="movie-poster">
+          <div class="movie-details">
+            <h3 class="movie-title"></h3>
+            <p class="movie-rating"></p>
+          </div>
+        </div>
+        <div class="similar-movie" id="similar-movie-2">
+            <img src="" alt="" class="movie-poster">
+            <div class="movie-details">
+              <h3 class="movie-title"></h3>
+              <p class="movie-rating"></p>
+            </div>        </div>
+        <div class="similar-movie" id="similar-movie-3">
+            <img src="" alt="" class="movie-poster">
+            <div class="movie-details">
+              <h3 class="movie-title"></h3>
+              <p class="movie-rating"></p>
+            </div>        </div>
+        <div class="similar-movie" id="similar-movie-4">
+            <img src="" alt="" class="movie-poster">
+            <div class="movie-details">
+              <h3 class="movie-title"></h3>
+              <p class="movie-rating"></p>
+            </div>        </div>
+      </div>
+      
   </div>
 
   <script src="script.js"></script>
