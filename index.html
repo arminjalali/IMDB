@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>IMDb Movie Search</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+
+    .search-icon {
+      position: relative;
+    }
+
+    .search-icon::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      transform: translateY(-50%);
+      width: 20px;
+      height: 20px;
+      background-size: cover;
+    }
+
+    .api-section {
+      display: flex;
+      align-items: center;
+      margin-left: auto;
+    }
+
+    .api-field {
+      margin-right: 140px;
+      width: 180px;
+    }
+
+    .theme-switch{
+        display: flex;
+        align-items: center;
+        margin-right: 50px;
+        }
+
+    .theme-toggle{
+        margin-right: -50px;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-image: url(background.jpg);
+      background-size: cover;
+      background-attachment: fixed;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: rgb(0, 0, 0);
+      padding: 8px;
+      display: flex;
+      align-items: center;
+    }
+
+    header img {
+      height: 40px;
+      margin-right: 10px;
+    }
+
+    header input {
+      height: 15px;
+      width: 300px;
+      padding: 5px;
+      font-size: 12px;
+    }
+
+    #main-content {
+      margin-top: 70px;
+      padding: 20px;
+    }
+
+    .movie-info {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 20px;
+    }
+
+    .movie-info img {
+      width: 150px;
+      margin-right: 20px;
+    }
+
+    .similar-movies {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .similar-movie {
+      width: 30%;
+      margin-bottom: 20px;
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 20px;
+    }
+
+    @media only screen and (max-width: 768px) {
+      .similar-movie {
+        width: 45%;
+      }
+    }
+
+    @media only screen and (max-width: 480px) {
+      .similar-movie {
+        width: 100%;
+      }
+    }
+
+
+  </style>
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="IMDb Logo">
+        <div class="search-bar">
+          <input type="text" id="search-bar" placeholder="Search IMDb">
+          <button type="button" id="search-button">Search</button>
+        </div>
+        <div class="api-section">
+          <input type="text" class="api-field" placeholder="API KEY">
+        </div>
+      
+        <div class="theme-switch">
+          <input type="checkbox" id="theme-toggle">
+          <label for="theme-toggle" class="toggle-label"></label>
+        </div>
+      </header>
+
+  <div id="main-content">
+    <div class="movie-info" id="searched-movie">
+      <!-- HTML for the searched movie rectangle from the previous example... -->
+    </div>
+
+    <div class="similar-movies">
+      <!-- HTML for the similar movie rectangles from the previous example... -->
+    </div>
+
+    <div class="movie-info" id="movie-details">
+      <!-- HTML for the movie details rectangle from the previous example... -->
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
