@@ -2,6 +2,7 @@
 body.light {
   color: #333;
   background-color: #f5f5f5;
+
 }
 
 body.light:before {
@@ -22,6 +23,7 @@ body.light:before {
 body.dark {
   color: #eee;
   background-color: #333;
+
 }
 
 body.dark:before {
